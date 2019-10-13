@@ -1,0 +1,2 @@
+docker-compose down; docker system prune --force --volumes; docker rm -f $(docker container list -qa); docker rmi $(docker image list -qa); docker-compose up -d; docker exec -it nginx-srv bash;
+
