@@ -1,16 +1,23 @@
 <?php
 echo "<table border=1>";
-$n = 1;
 
-for ($n1 = 1; $n1 <= 10; $n1++) {
+for ($i = 0; $i < $_POST['n']; $i++) {
     echo "<tr>";
 
-    for ($n2 = 1; $n2 <= 10; $n2++) {
+    for ($j = 0; $j < $_POST['n']; $j++) {
 
-        echo "<td>", $n, "</td>";
-        $n = $n + 1;
+        metervalor($i, $j);
     }
-
     echo "</tr>";
 }
 echo "</table>";
+
+//meter valor
+function metervalor($a, $b)
+{
+    if ($a == $b) {
+        echo "<td>", 1, "</td>";
+    } else {
+        echo "<td>", 0, "</td>";
+    }
+}
