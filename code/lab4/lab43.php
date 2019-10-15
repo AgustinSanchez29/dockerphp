@@ -1,6 +1,6 @@
 <?php
 echo '<h1>Hello from docker: index.php</h1>';
-echo '<img src="./cat-meme.png" />';
+echo '<img src="./cat-meme.png" /><br>';
 
 //field
 define("ARRAY_SIZE", 20);
