@@ -1,7 +1,6 @@
 <?php
 echo '<h1>Hello from docker: index.php</h1>';
-echo '<h4>Felicidades: Rho99, index.php dockerizado!</h1>';
-echo '<h1>Aqui esta tu recompensa! Sehr gut !</h1>';
+echo '<img src="./cat-meme.png" />';
 
 //field
 define("ARRAY_SIZE", 20);
@@ -19,7 +18,6 @@ while ($i < ARRAY_SIZE) {
         $i++;
     }
 }
-echo '<img src="./cat-meme.png" />';
 genTable($elementos);
 
 function genTable($arr)
