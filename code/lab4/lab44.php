@@ -9,8 +9,6 @@ echo '<input type="submit" value="ok" name="btn_ok" />';
 
 if (isset($_SESSION['arr'])) {
 
-
-
     if ($_POST['n'] % 2 == 0) {
         echo '<br>dentro<br>';
         array_push($_SESSION['arr'], $_POST['n']);
