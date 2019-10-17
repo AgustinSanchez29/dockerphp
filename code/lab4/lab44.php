@@ -1,26 +1,25 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<head>
-  <title>lab44.php</title>
-  <?PHP
-  if (isset($_POST['meter'])) {
-    $n = $_POST['n'];
+session_start();
 
-    if ($n % 2 == 0) {
-      echo $n . '<br>';
+echo '<form action="lab44.php" method="POST">';
+echo '<input type="number" name="n" required/><br />';
+echo '<input type="submit" value="ok" name="btn_ok" />';
+
+
+if (isset($_SESSION['arr'])) {
+
+
+
+    if ($_POST['n'] % 2 == 0) {
+        echo '<br>dentro<br>';
+        array_push($_SESSION['arr'], $_POST['n']);
+        print_r($_SESSION['arr']);
     } else {
-      echo 'no es par<br>';
+        header("location: index.php");
     }
-  }
-  ?>
-</head>
-
-<body>
-  <Form name="form1" Method="POST" Action="./lab44.php">
-    <Input Type="number" Value="" Name="n">
-    <Input Type="Submit" Name="meter" Value="Meter">
-  </FORM>
-</body>
-
-</html>
+} else {
+    $_SESSION['arr'] = array();
+    header("location: index.php");
+}
+echo '<form/>';
