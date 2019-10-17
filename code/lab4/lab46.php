@@ -6,14 +6,14 @@ for ($i = 0; $i < $_POST['n']; $i++) {
 
     for ($j = 0; $j < $_POST['n']; $j++) {
 
-        metervalor($i, $j);
+        meterValor($i, $j);
     }
     echo "</tr>";
 }
 echo "</table>";
 
 //meter valor
-function metervalor($a, $b)
+function meterValor($a, $b)
 {
     if ($a == $b) {
         echo "<td>", 1, "</td>";
