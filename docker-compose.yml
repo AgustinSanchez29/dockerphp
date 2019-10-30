@@ -32,7 +32,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: database
+      MYSQL_DATABASE: devdb
       MYSQL_USER: developer
       MYSQL_PASSWORD: dev
     ports:
