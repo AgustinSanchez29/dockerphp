@@ -2225,12 +2225,13 @@ res_9 integer,
 res_10 integer,
 primary key (id_solucion) );
 
-create table tbl_encuestas ( id_encuesta integer not null auto_increment,
-id_persona integer,
-id_solucion integer,
+create table tbl_cat_preguntas ( id_cat_pregunta integer not null auto_increment,
+descripcion varchar(999),
 primary key (id_encuesta) );
 
-create table tbl_encuestas ( id_encuesta integer not null auto_increment,
-id_persona integer,
-id_solucion integer,
+create table tbl_cat_respuestas ( id_cat_respuesta integer not null auto_increment,
+id_cat_pregunta integer,
+descripcion varchar(999),
 primary key (id_encuesta) );
+
+
