@@ -6,5 +6,5 @@
 * Poner código html + php dentro de la carpeta 'code' 
 * sudo groupadd docker; sudo groupadd docker-compose; sudo gpasswd -a $USER docker; sudo gpasswd -a $USER docker-compose;  sudo usermod -aG docker $USER;  sudo usermod -aG docker-compose $USER;
 
-*docker-compose down; docker-compose -up -d
+* docker-compose down; docker-compose -up -d
 
