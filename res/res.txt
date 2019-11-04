@@ -1,5 +1,0 @@
-http://www.sqltutorial.org/sql-sample-database/
-
-https://hub.docker.com/_/mysql?tab=description
-
-https://convertcase.net/

@@ -1,4 +1,5 @@
 use devdb;
+
 create table account ( account_id integer not null auto_increment,
 avail_balance float,
 close_date date,
@@ -2187,8 +2188,31 @@ where
 	'sav',
 	'cd',
 	'mm');
-	
-SELECT e.*
-FROM employee as e
 
+create table tbl_encuestas ( id_encuesta integer not null auto_increment,
+id_persona integer,
+id_solucion integer,
+primary key (id_encuesta) );
 
+create table tbl_personas ( id_persona integer not null auto_increment,
+nombre varchar(99),
+sexo varchar(1),
+salario decimal(8,2),
+provincia varchar(99),
+edad integer,
+primary key (id_persona) );
+
+create table tbl_encuestas ( id_encuesta integer not null auto_increment,
+id_persona integer,
+id_solucion integer,
+primary key (id_encuesta) );
+
+create table tbl_encuestas ( id_encuesta integer not null auto_increment,
+id_persona integer,
+id_solucion integer,
+primary key (id_encuesta) );
+
+create table tbl_encuestas ( id_encuesta integer not null auto_increment,
+id_persona integer,
+id_solucion integer,
+primary key (id_encuesta) );
