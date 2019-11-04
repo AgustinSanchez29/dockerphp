@@ -39,9 +39,9 @@ services:
       - "9906:3306"
     container_name: mysql-srv
     volumes:
-      - mysql_vol:/var/lib/mysql
+      - mysql-datavolume:/var/lib/mysql
 volumes:
-  mysql-vol:
+  mysql-datavolume:
 
 networks:
   code-network:

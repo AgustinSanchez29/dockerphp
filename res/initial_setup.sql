@@ -2227,11 +2227,11 @@ primary key (id_solucion) );
 
 create table tbl_cat_preguntas ( id_cat_pregunta integer not null auto_increment,
 descripcion varchar(999),
-primary key (id_encuesta) );
+primary key (id_cat_pregunta) );
 
 create table tbl_cat_respuestas ( id_cat_respuesta integer not null auto_increment,
 id_cat_pregunta integer,
 descripcion varchar(999),
-primary key (id_encuesta) );
+primary key (id_cat_respuesta) );
 
 
