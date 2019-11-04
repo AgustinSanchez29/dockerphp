@@ -40,6 +40,7 @@ services:
     container_name: mysql-srv
     volumes:
       - mysql-datavolume:/var/lib/mysql
+
 volumes:
   mysql-datavolume:
 
