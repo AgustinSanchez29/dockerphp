@@ -3,7 +3,6 @@ class cliente
 {
     public $nombre;
     public $numero;
-
     public $peliculas_alquiladas;
 
     public function __construct($nombre, $numero)
