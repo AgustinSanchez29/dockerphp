@@ -108,3 +108,20 @@ class juego extends soporte
         }
     }
 }
+
+class Foo
+{
+    public static $mystatic = "foo";
+    public function staticvalor()
+    {
+        return self::$mystatic;
+    }
+}
+
+class Bar extends Foo
+{
+    public function foostatic()
+    {
+        return parent::$mystatic;
+    }
+}

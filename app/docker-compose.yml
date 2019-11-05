@@ -12,6 +12,8 @@ services:
     networks:
       - code-network
     container_name: php
+    links:
+    - "mysql"
 
   web:
     build: 
@@ -39,14 +41,16 @@ services:
       MYSQL_USER: dev
       MYSQL_PASSWORD: dev
     ports:
-      - "3306:3306"
+      - "9906:3306"
     volumes:
       - ./:/app
       - dbdata:/var/lib/mysql
     container_name: mysql
-    networks:
-      - code-network
 
+    networks:
+      - code-network 
+         
+ 
 volumes:
   dbdata:
 
