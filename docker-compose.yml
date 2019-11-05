@@ -4,7 +4,7 @@ services:
   web:
     image: nginx:latest
     depends_on:
-      - db
+      - mysql
     stdin_open: true
     tty: true
     ports:
@@ -16,23 +16,23 @@ services:
       - code-network
     container_name: nginx-srv
   php:
-    image: php:fpm
+    build: .
     stdin_open: true
     tty: true
     depends_on:
-      - db
+      - mysql
     volumes:
       - ./code:/code
     networks:
       - code-network
     container_name: php-srv
-  db:
+  mysql:
     image: mysql:8.0.18
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: devdb
+      MYSQL_DATABASE: encuestas
       MYSQL_USER: developer
       MYSQL_PASSWORD: dev
     ports:
