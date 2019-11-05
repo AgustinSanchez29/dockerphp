@@ -31,8 +31,8 @@ class soporte
 
     function __construct($tit, $num, $precio)
     {
-        $this->tit = $titulo;
-        $this->num = $numero;
+        $this->titulo = $tit;
+        $this->numero = $num;
         $this->precio = $precio;
     }
 
@@ -97,7 +97,7 @@ class juego extends soporte
 
     public function imprime_jugadores_posibles()
     {
-        if ($this->min_jugadores == $this->$max_jugadores) {
+        if ($this->min_jugadores == $this->max_jugadores) {
             if ($this->min_jugadores == 1) {
                 echo "<br> para un jugador";
             } else {
