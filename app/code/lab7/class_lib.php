@@ -31,3 +31,15 @@ class ClaseConcreta1 extends ClaseAbstracta
         return "{$prefix}ClaseConcreta1";
     }
 }
+
+class ClaseConcreta2 extends ClaseAbstracta
+{
+    protected function tomarValor()
+    {
+        return "ClaseConcreta2";
+    }
+    public function prefixValor($prefix)
+    {
+        return "{$prefix}ClaseConcreta2";
+    }
+}
