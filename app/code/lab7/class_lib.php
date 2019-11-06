@@ -43,3 +43,25 @@ class ClaseConcreta2 extends ClaseAbstracta
         return "{$prefix}ClaseConcreta2";
     }
 }
+
+interface iTemplate
+{
+    public function poner_variable($nombre, $var);
+    public function ver_html($template);
+}
+
+class Template implements iTemplate
+{
+    private $vars = array();
+    public function ponerVariable($nombre, $var)
+    {
+        $this->vars[$nombre] = $var;
+    }
+    public function verHtml($template)
+    {
+        foreach ($this->vars as $nombre => $value) {
+            $template = str_replace('{' . $nombre . '}', $value, $template);
+        }
+        return $template;
+    }
+}
