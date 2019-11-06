@@ -53,11 +53,11 @@ interface iTemplate
 class Template implements iTemplate
 {
     private $vars = array();
-    public function ponerVariable($nombre, $var)
+    public function poner_variable($nombre, $var)
     {
         $this->vars[$nombre] = $var;
     }
-    public function verHtml($template)
+    public function ver_html($template)
     {
         foreach ($this->vars as $nombre => $value) {
             $template = str_replace('{' . $nombre . '}', $value, $template);
