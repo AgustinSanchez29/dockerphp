@@ -65,3 +65,61 @@ class Template implements iTemplate
         return $template;
     }
 }
+
+
+class SubObject
+{
+    static $instances = 0;
+    public $instance;
+    public function __construct()
+    {
+        $this->instance = ++self::$instances;
+    }
+
+    public function __clone()
+    {
+        $this->instance = ++self::$instances;
+    }
+}
+
+class MyClonable
+{
+    public $object1;
+    public $object2;
+
+    function __clone()
+    {
+        $this->object1 = clone $this->object1;
+    }
+}
+
+class Cilindro
+{
+    protected $pi;
+    protected $diametro;
+    protected $altura;
+    protected $radio;
+
+    function __construct($d, $a)
+    {
+        $this->diametro = $d;
+        $this->altura = $a;
+        $this->pi = 3.1416;
+        $this->radio = $d / 2;
+    }
+
+    function obtener_radio()
+    {
+        return $radio;
+    }
+
+    function calcular_volumen()
+    {
+        return ($this->pi * $this->radio * $this->altura);
+    }
+
+    function calcular_area()
+    {
+        return (2 * $this->pi * $this->radio * ($this->radio + $this->altura));
+    }
+}
